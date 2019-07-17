@@ -4,8 +4,9 @@ environment_variables:
         "INPUT_FILE": "saml.yaml"
         "S3_BUCKET": ""
 phases:
-    runtime-versions:
-	python: 3.6
+    install:
+	runtime-versions:
+	   python: 3.6
     during_build:
         commands:
             - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
