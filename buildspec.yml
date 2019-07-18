@@ -10,6 +10,7 @@ phases:
         python: 3.7
      build:
         commands:
+           - export BUCKET=codepipeline-us-east-1-267902918508
            - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
 artifacts:
   files:
