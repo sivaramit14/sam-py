@@ -11,8 +11,9 @@ phases:
      build:
         commands:
            - export BUCKET=codepipeline-us-east-1-267902918508
-           - aws cloudformation package --template $INPUT_FILE --s3-bucket $S3_BUCKET --output-template post-saml.yaml
+           - aws cloudformation package --template $INPUT_FILE --s3-bucket $BUCKET --output-template outputtemplate.yaml
 artifacts:
+  type: zip
   files:
-     - post-saml.yaml
+     - outputtemplate.yaml
      - beta.json
