@@ -2,7 +2,7 @@ version: 0.2
 environment_variables:
     plaintext:
         "INPUT_FILE": "saml.yaml"
-        "S3_BUCKET": ""
+        "S3_BUCKET": "codepipeline-us-east-1-267902918508"
 
 phases:
   install:
